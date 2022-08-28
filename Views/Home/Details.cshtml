@@ -1,0 +1,50 @@
+﻿@model JobWeb2022.Models.Job
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h3 class="ListJob">تفاصيل الوظيفة</h3>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobTile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobImage)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(model=>model.JobImage)" style="width:128px;height:128px" class="thumbnail" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("التقدم للوظيفة", "Apply", new { id = Model.JobId } , new { @class="btn btn-success"}) |
+    @Html.ActionLink("العودة الى القائمة", "Index")
+</p>

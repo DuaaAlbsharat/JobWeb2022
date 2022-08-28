@@ -1,0 +1,46 @@
+﻿@model IEnumerable<JobWeb2022.Models.ApplyForJob>
+
+@{
+    ViewBag.Title = "GetUserById";
+}
+
+<h3 class="ListJob">جميع الوظائف المتقدم لها الزوار</h3>
+
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.job.JobTile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplyDate)
+        </th>
+
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.job.JobTile)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Message)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ApplyDate)
+    </td>
+
+    <td>
+        @Html.ActionLink("تعديل", "EditOfJob","Home", new { id = item.ApplyForJobId } ,new {@class="btn btn-primary" }) |
+        @Html.ActionLink("التفاصيل", "DetailsOfJob", new { id = item.ApplyForJobId }, new { @class = "btn btn-info" }) |
+        @Html.ActionLink("حذف", "Delete", new { id = item.ApplyForJobId}, new { @class = "btn btn-danger"})
+    </td>
+</tr>
+}
+
+</table>

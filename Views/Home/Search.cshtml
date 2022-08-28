@@ -1,0 +1,24 @@
+﻿@model IEnumerable<JobWeb2022.Models.Job>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="panel panel-default">
+    <h1 class="panel-heading"> نتائج البحث </h1>
+
+    <div class="row">
+        @foreach (var subItem in Model)
+        {
+        <div class="col-md-3 thumbnail" style="margin-bottom:30px ; margin-right:20px">
+            <img src="~/Uploads/@subItem.JobImage" />
+            <h3>@Html.DisplayFor(modelItem => subItem.JobTile)</h3>
+            <h3>@Html.DisplayFor(modelItem => subItem.JobContent)</h3>
+            @*@Html.ActionLink("التفاصيل", "Details", new { id = subItem.JobId }, new { @class = "btn btn-primary" })*@
+            @Html.ActionLink("التفاصيل", "Details", new { jobId = subItem.JobId }, new { @class = "btn btn-primary" })
+
+        </div>
+
+        }
+    </div>
+</div>

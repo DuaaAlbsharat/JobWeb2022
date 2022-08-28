@@ -1,0 +1,41 @@
+﻿@model IEnumerable<JobWeb2022.Models.JobsViewModel>
+
+@{
+    ViewBag.Title = "GetJobByPublisher";
+}
+
+<h3 class="ListJob"> الوظائف التي تم نشرها  الناشرون</h3>
+
+@foreach (var gr in Model)
+{
+    <h2>@gr.JobTitle </h2>
+    <table class="table table-bordered table-hover m-0">
+        <tr>
+            <th> اسم الباحث</th>
+            <th>
+                نص الرسالة
+            </th>
+            <th>
+                تاريخ الرسالة
+
+            </th>
+        </tr>
+        @foreach (var item in gr.Items)
+        {
+            <tr>
+                <td>
+                   
+                    @item.UserId
+                </td>
+                <td>
+                    @item.Message
+                </td>
+
+                <td>
+                    @item.ApplyDate
+                </td>
+            </tr>
+        }
+    </table>
+
+}

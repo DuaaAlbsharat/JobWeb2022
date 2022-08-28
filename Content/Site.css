@@ -1,0 +1,113 @@
+﻿
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.ffoter {
+    background-color: #FFFFFF;
+}
+
+    .ffoter ul li a {
+        color: #fff;
+        font-size: 14px;
+    }
+
+.weP {
+    color: azure;
+    padding-left: 15px;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-right: 17px
+}
+
+.ffoter h4 {
+    margin-bottom: 20px;
+    color:#fff;
+    padding-top:15px;
+    padding-right:18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+/*.navbar-inverse .navbar-nav > li > a.logout {
+    
+    cursor: pointer;
+}*/
+/*.navbar-inverse .navbar-nav > li > a {
+    cursor: pointer;
+}
+*/
+#searchName {
+    width: 100px;
+    height: 30px;
+    border: 2px solid#ccc;
+    border-radius: 5px;
+    background-color: white;
+    background-image: url('../Images/search.png');
+    background-size: 40px 25px;
+    background-repeat: no-repeat;
+    padding: 10px 20px 9px 12px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    transition: width 0.4s ease-in-out
+}
+
+    #searchName:focus {
+        width: 100%;
+    }
+
+.imgSize {
+    font-size: 90px;
+}
+
+.navbar-user {
+    width: 350px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+@media(min-width:992px) {
+    .col-md-3 {
+        width: 23%;
+    }
+}
+ .nav-link{
+    color:#fff;
+}
+.imageJob{
+    width:70px;
+    height:60px;
+    border-radius:15px
+}
+.navbar-nav {
+    margin-left: auto;
+}
+.tile-view{
+    padding-top:30px;
+}
+.createJob{
+    padding-top:40px;
+    padding-bottom:0px;
+    margin:10px;
+   
+}
+.table{
+    margin-top:-50px;
+}
+h3.ListJob {
+    padding-top: 50px;
+    padding-bottom:5px;
+}
+.ImageHome {
+    width: 300px;
+    height: 300px;
+}
+.cateTitle{
+    padding:20px;
+    margin:20px;
+}

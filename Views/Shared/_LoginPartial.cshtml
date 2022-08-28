@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNet.Identity
+@using JobWeb2022.Models;
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoff" }))
+    {
+        var db = new ApplicationDbContext();
+        var userId = User.Identity.GetUserId();
+        var currentUser = db.Users.Where(x => x.Id == userId).SingleOrDefault();
+        @Html.AntiForgeryToken() //التطبيق محمي من الهجمات
+
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item nav-link">
+                @Html.ActionLink(" مرحبا بك يا : " + User.Identity.GetUserName(), "Index", "Manage", new { @class = "link-primary" })
+            </li>
+
+
+            <li>
+                <a href="javascript:document.getElementById('logoff').submit()" class="btn btn-danger btn-block">تسجيل الخروج</a>
+            </li>
+        </ul>
+
+    }
+}
+else
+{
+    <div class="navbar-nav">
+
+        <a href="~/Account/Login" class="nav-item nav-link">
+            <i class="fa fa-user"></i>
+            تسجيل
+        </a>
+        <a href="~/Account/Register" class="nav-item nav-link">
+            <i class="fa fa-address-card"></i>
+            أشتراك
+        </a>
+    </div>
+    @*<div class="navbar-nav ">
+
+        </div>*@
+
+}
+
+

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<JobWeb2022.Models.Category>
+
+@{
+    ViewBag.Title = "قائمة أنواع الوظائف";
+}
+
+<p class="createJob">
+    @Html.ActionLink("إنشاء وظيفة جديدة", "Create" , null, new { @class="btn btn-primary"})
+</p>
+<table class="table table-bordered table-hover  "> 
+    <tr class="bg-secondary">
+        <th class="text-white">
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th class="text-white">
+            @Html.DisplayNameFor(model => model.CategoryDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryDescription)
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "Edit", new { id=item.CategoryId }) |
+            @Html.ActionLink("التفاصيل", "Details", new { id=item.CategoryId }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.CategoryId })
+        </td>
+    </tr>
+}
+
+</table>

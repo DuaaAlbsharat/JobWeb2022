@@ -1,0 +1,34 @@
+﻿@model JobWeb2022.Models.ApplyForJob
+
+@{
+    ViewBag.Title = "DetailsOfJob";
+}
+
+<h3 class="ListJob"> تفاصيل الوظيفة</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            الرسالة
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            تاريخ الارسال
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplyDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.ApplyForJobId }, new { @class="btn btn-primary"}) |
+    @Html.ActionLink("العودة الى قائمة الوظائف", "GetUserById")
+</p>
+

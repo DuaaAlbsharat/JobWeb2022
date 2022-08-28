@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobWeb2022", "JobWeb2022.csproj", "{326C8E23-E47B-4EED-9F30-9BF0EE7349F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{326C8E23-E47B-4EED-9F30-9BF0EE7349F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{326C8E23-E47B-4EED-9F30-9BF0EE7349F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{326C8E23-E47B-4EED-9F30-9BF0EE7349F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{326C8E23-E47B-4EED-9F30-9BF0EE7349F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4F32DF5-7854-4049-BB90-D9061A0FFEB4}
+	EndGlobalSection
+EndGlobal

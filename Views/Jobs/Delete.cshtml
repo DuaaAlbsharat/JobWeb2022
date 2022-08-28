@@ -1,0 +1,56 @@
+﻿@model JobWeb2022.Models.Job
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h3>حذف الوظيفة</h3>
+
+<h3>هل أنت متاكد من حذف هذه الوظيفة ؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobTile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobImage)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(model=>model.JobImage)" style="width:50px;height:50px" class="thumbnail" />
+
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("العودة الى القائمة الرئيسية", "Index")
+        </div>
+    }
+</div>
